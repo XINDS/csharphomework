@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>    <title>ECharts</title>
+    <script src="echarts.min.js" ></script>
+</head>
+<body>
+    <div id="main" style ="width: 960px;height:540px;"></div>
+    <script type="text/javascript" > 
+        var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+            title: {
+                text: '每年论文数量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["2010年","2011年","2012年","2013年","2014年","2015年","2016年","2017年","2018年","2019年","2020年"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [1825,1889,2208,2413,2730,2889,2961,3046,3103,3323,2780]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

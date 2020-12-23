@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>    <title>ECharts</title>
+    <script src="echarts.min.js" ></script>
+</head>
+<body>
+    <div id="main" style ="width: 960px;height:540px;"></div>
+    <script type="text/javascript" > 
+        var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+            title: {
+                text: '2015年每月论文数量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: ["222","190","237","215","190","212","258","191","217","223","204","235"]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

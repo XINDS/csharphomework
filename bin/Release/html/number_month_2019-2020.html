@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>    <title>ECharts</title>
+    <script src="echarts.min.js" ></script>
+</head>
+<body>
+    <div id="main" style ="width: 960px;height:540px;"></div>
+    <script type="text/javascript" > 
+        var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+            title: {
+                text: '2019-2020年每月论文数量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["2019年1月","2019年2月","2019年3月","2019年4月","2019年5月","2019年6月","2019年7月","2019年8月","2019年9月","2019年10月","2019年11月","2019年12月","2020年1月","2020年2月","2020年3月","2020年4月","2020年5月","2020年6月","2020年7月","2020年8月","2020年9月","2020年10月","2020年11月","2020年12月"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'line',
+                data: ["309","246","268","270","230","276","252","259","276","238","256","308","294","230","232","210","192","212","209","215","233","294","200","147"]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

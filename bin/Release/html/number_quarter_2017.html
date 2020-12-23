@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>    <title>ECharts</title>
+    <script src="echarts.min.js" ></script>
+</head>
+<body>
+    <div id="main" style ="width: 960px;height:540px;"></div>
+    <script type="text/javascript" > 
+        var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+            title: {
+                text: '2017年每季论文数量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["第1季度","第2季度","第3季度","第4季度"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: ["705","751","716","709"]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

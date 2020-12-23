@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>    <title>ECharts</title>
+    <script src="echarts.min.js" ></script>
+</head>
+<body>
+    <div id="main" style ="width: 960px;height:540px;"></div>
+    <script type="text/javascript" > 
+        var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+            title: {
+                text: '2019-2020年每季论文数量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["2019年第1季度","2019年第2季度","2019年第3季度","2019年第4季度","2020年第1季度","2020年第2季度","2020年第3季度","2020年第4季度"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'line',
+                data: ["823","776","787","802","756","614","657","641"]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
